@@ -1,0 +1,131 @@
+Script started on 2021-10-21 21:02:11-0400
+divyak@cisc450:~/proj1$ ls -1[Kl
+total 25
+-rwxr-xr-x 1 divyak divyak   189 Oct 14 13:59 Makefile
+-rwxrwxr-x 1 divyak divyak 13152 Oct 21 20:56 udpclient
+-rw-r--r-- 1 divyak divyak  6487 Oct 21 20:56 udpclient.c
+-rw-rw-r-- 1 divyak divyak     0 Oct 21 21:01 udpclientScript
+-rwxrwxr-x 1 divyak divyak 13056 Oct 21 21:00 udpserver
+-rw-r--r-- 1 divyak divyak  5079 Oct 21 21:01 udpserver.c
+-rw-rw-r-- 1 divyak divyak     0 Oct 21 21:02 udpserverScript
+divyak@cisc450:~/proj1$ make clean
+rm udpclient udpserver
+divyak@cisc450:~/proj1$ ls -;[Kl
+total 11
+-rwxr-xr-x 1 divyak divyak  189 Oct 14 13:59 Makefile
+-rw-r--r-- 1 divyak divyak 6487 Oct 21 20:56 udpclient.c
+-rw-rw-r-- 1 divyak divyak    0 Oct 21 21:01 udpclientScript
+-rw-r--r-- 1 divyak divyak 5079 Oct 21 21:01 udpserver.c
+-rw-rw-r-- 1 divyak divyak    0 Oct 21 21:02 udpserverScript
+divyak@cisc450:~/proj1$ make all
+/usr/bin/gcc udpclient.c -o udpclient
+/usr/bin/gcc udpserver.c -o udpserver
+divyak@cisc450:~/proj1$ ld[Ks - [Kl
+total 12
+-rwxr-xr-x 1 divyak divyak   189 Oct 14 13:59 Makefile
+-rwxrwxr-x 1 divyak divyak 13152 Oct 21 21:02 udpclient
+-rw-r--r-- 1 divyak divyak  6487 Oct 21 20:56 udpclient.c
+-rw-rw-r-- 1 divyak divyak     0 Oct 21 21:01 udpclientScript
+-rwxrwxr-x 1 divyak divyak 13056 Oct 21 21:02 udpserver
+-rw-r--r-- 1 divyak divyak  5079 Oct 21 21:01 udpserver.c
+-rw-rw-r-- 1 divyak divyak     0 Oct 21 21:02 udpserverScript
+divyak@cisc450:~/proj1$ ./udpserver
+Waiting for incoming messages on port 45321
+
+Received Request Packet: 
+Request ID: 1
+ Count:  10
+
+Request ID: 1
+Count: 10
+Number of Packets Sent: 1
+Number of Bytes Sent: 108
+Sequence Number sum: 1
+Checksum: 3995405445
+
+Received Request Packet: 
+Request ID: 2
+ Count:  467
+
+Request ID: 2
+Count: 467
+Number of Packets Sent: 19
+Number of Bytes Sent: 2052
+Sequence Number sum: 190
+Checksum: 3289447392
+
+Received Request Packet: 
+Request ID: 3
+ Count:  5609
+
+Request ID: 3
+Count: 5609
+Number of Packets Sent: 225
+Number of Bytes Sent: 24300
+Sequence Number sum: 25425
+Checksum: 3186888377
+
+Received Request Packet: 
+Request ID: 4
+ Count:  320
+
+Request ID: 4
+Count: 320
+Number of Packets Sent: 13
+Number of Bytes Sent: 1404
+Sequence Number sum: 91
+Checksum: 1206883607
+
+Received Request Packet: 
+Request ID: 1
+ Count:  15
+
+Request ID: 1
+Count: 15
+Number of Packets Sent: 1
+Number of Bytes Sent: 108
+Sequence Number sum: 1
+Checksum: 2148019208
+
+Received Request Packet: 
+Request ID: 2
+ Count:  5000
+
+Request ID: 2
+Count: 5000
+Number of Packets Sent: 200
+Number of Bytes Sent: 21600
+Sequence Number sum: 20100
+Checksum: 4008508978
+
+^C
+divyak@cisc450:~/proj1$ ./udpserver
+Waiting for incoming messages on port 45321
+
+Received Request Packet: 
+Request ID: 3
+ Count:  5000
+
+Request ID: 3
+Count: 5000
+Number of Packets Sent: 200
+Number of Bytes Sent: 21600
+Sequence Number sum: 20100
+Checksum: 3232025745
+
+Received Request Packet: 
+Request ID: 4
+ Count:  5000
+
+Request ID: 4
+Count: 5000
+Number of Packets Sent: 200
+Number of Bytes Sent: 21600
+Sequence Number sum: 20100
+Checksum: 3902326202
+
+^C
+divyak@cisc450:~/proj1$ exit
+exit
+
+Script done on 2021-10-21 21:06:48-0400
